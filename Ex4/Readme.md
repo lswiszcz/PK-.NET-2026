@@ -68,17 +68,13 @@ Dodatkowo, aplikacja powinna uwzględniać obsługę e-booków jako osobnego typ
 Library library = new Library();
 
 // Dodanie książek do biblioteki
-Book book1 = new Book("C# Programming", "John Doe", "12345");
-Book book2 = new Book("Design Patterns", "Gamma et al.", "67890");
+Book book1 = new Book(1, "C# Programming", "John Doe");
+Book book2 = new Book(2, "Design Patterns", "Gamma et al.");
 library.AddBook(book1);
 library.AddBook(book2);
 
-// Rejestracja czytelnika
-Reader reader = new Reader(1, "Alice", "alice@example.com");
-library.RegisterReader(reader);
-
 // Wypożyczenie książki
-if (library.BorrowBook("12345", reader))
+if (library.BorrowBook(1, "Alice"))
 {
     Console.WriteLine("Book borrowed successfully.");
 }
@@ -88,7 +84,7 @@ else
 }
 
 // Zwrot książki
-if (library.ReturnBook("12345", reader))
+if (library.ReturnBook(1, "Alice"))
 {
     Console.WriteLine("Book returned successfully.");
 }
