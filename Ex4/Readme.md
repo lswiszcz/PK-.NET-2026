@@ -84,7 +84,7 @@ else
 }
 
 // Zwrot książki
-if (library.ReturnBook(1, "Alice"))
+if (library.ReturnBook(1))
 {
     Console.WriteLine("Book returned successfully.");
 }
